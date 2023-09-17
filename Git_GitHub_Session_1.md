@@ -85,4 +85,3 @@
 17. **Managing Issues**:
     - GitHub provides issue tracking for bug reports, feature requests, and other tasks associated with your project.
 
-These are some fundamental Git and GitHub commands and concepts to get you started. Git and GitHub offer many more features for version control and collaboration in software development.
