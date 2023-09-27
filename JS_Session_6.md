@@ -1,17 +1,26 @@
 # Contents to be covered in this session.
 
 ## 1. JavaScript Error Handling - Try and Catch
-## 2. JavaScript Functions
-## 3. JavaScript Arrow Functions
-## 4. JavaScript Lexical Environment
-## 5. JavaScript First class functions
-## 6. JavaScript Anonymous & Named Functions Expression
-## 7. JavaScript Higher Order Functions
-## 8. JavaScript Callback Functions
-## 9. Difference between Params and Args
-## 10. JavaScript Default Parameters
-## 11. ReLearn: Bitwise Operators & Infinite Loops (Refer: JS_Session_5.md)
 
+## 2. JavaScript Functions
+
+## 3. JavaScript Arrow Functions
+
+## 4. JavaScript Lexical Environment
+
+## 5. JavaScript First class functions
+
+## 6. JavaScript Anonymous & Named Functions Expression
+    
+## 7. JavaScript Higher Order Functions
+
+## 8. JavaScript Callback Functions
+
+## 9. Difference between Params and Args
+
+## 10. JavaScript Default Parameters
+
+## 11. ReLearn: Bitwise Operators & Infinite Loops (Refer: JS_Session_5.md)
 
 # JavaScript Error Handling - Try and Catch
 
@@ -82,8 +91,7 @@ try {
 }
 ```
 
-
-#  JavaScript Functions
+# JavaScript Functions
 
 JavaScript functions are blocks of reusable code that perform a specific task. They allow you to encapsulate logic, make your code more modular, and facilitate code reuse. In JavaScript, functions are first-class citizens, which means you can assign them to variables, pass them as arguments to other functions, and return them from other functions. Here's a detailed explanation of JavaScript functions with code examples:
 
@@ -107,7 +115,7 @@ You can also create functions as expressions and assign them to variables. These
 ```javascript
 const add = function (a, b) {
   return a + b;
-}
+};
 
 const result = add(3, 5);
 console.log(result); // Output: 8
@@ -218,7 +226,6 @@ IIFE is a way to execute a function immediately after its declaration. It helps 
 
 console.log(privateVar); // Error: privateVar is not defined
 ```
-
 
 # JavaScript Arrow Functions
 
@@ -405,7 +412,6 @@ var innerFunc = outerFunction();
 innerFunc();
 ```
 
-
 # JavaScript First class functions
 
 In JavaScript, functions are first-class citizens, which means they can be treated like any other data type, such as strings, numbers, or objects. Here are some examples of how JavaScript allows you to work with first-class functions:
@@ -413,7 +419,7 @@ In JavaScript, functions are first-class citizens, which means they can be treat
 1. Assigning functions to variables:
 
 ```javascript
-const sayHello = function() {
+const sayHello = function () {
   console.log("Hello, world!");
 };
 
@@ -437,8 +443,8 @@ function sayHello(name) {
   return `Hello, ${name}!`;
 }
 
-greet("Alice", sayHi);    // Output: Hi, Alice!
-greet("Bob", sayHello);   // Output: Hello, Bob!
+greet("Alice", sayHi); // Output: Hi, Alice!
+greet("Bob", sayHello); // Output: Hello, Bob!
 ```
 
 In this example, the `greet` function accepts another function (`greetingFunction`) as an argument and uses it to generate a greeting message.
@@ -447,7 +453,7 @@ In this example, the `greet` function accepts another function (`greetingFunctio
 
 ```javascript
 function multiplier(factor) {
-  return function(x) {
+  return function (x) {
     return x * factor;
   };
 }
@@ -455,8 +461,8 @@ function multiplier(factor) {
 const double = multiplier(2);
 const triple = multiplier(3);
 
-console.log(double(5));  // Output: 10
-console.log(triple(5));  // Output: 15
+console.log(double(5)); // Output: 10
+console.log(triple(5)); // Output: 15
 ```
 
 In this example, the `multiplier` function returns another function that can be used to multiply a number by the specified factor.
@@ -465,15 +471,15 @@ In this example, the `multiplier` function returns another function that can be 
 
 ```javascript
 const mathOperations = {
-  add: function(x, y) {
+  add: function (x, y) {
     return x + y;
   },
-  subtract: function(x, y) {
+  subtract: function (x, y) {
     return x - y;
-  }
+  },
 };
 
-console.log(mathOperations.add(5, 3));      // Output: 8
+console.log(mathOperations.add(5, 3)); // Output: 8
 console.log(mathOperations.subtract(10, 2)); // Output: 8
 ```
 
@@ -482,13 +488,12 @@ In this example, we store functions as properties in an object.
 5. Creating anonymous functions:
 
 ```javascript
-const square = function(x) {
+const square = function (x) {
   return x * x;
 };
 
 console.log(square(4)); // Output: 16
 ```
-
 
 # JavaScript Anonymous & Named Functions Expression
 
@@ -550,9 +555,8 @@ const squaredNamed = numbers.map(function square(x) {
 });
 
 console.log(squaredAnonymous); // [1, 4, 9, 16, 25]
-console.log(squaredNamed);     // [1, 4, 9, 16, 25]
+console.log(squaredNamed); // [1, 4, 9, 16, 25]
 ```
-
 
 # JavaScript Higher Order Functions
 
@@ -602,7 +606,7 @@ console.log(sum); // 15
 The `forEach()` method executes a provided function once for each array element.
 
 ```javascript
-const fruits = ['apple', 'banana', 'cherry'];
+const fruits = ["apple", "banana", "cherry"];
 fruits.forEach(function (fruit) {
   console.log(fruit);
 });
@@ -617,7 +621,7 @@ fruits.forEach(function (fruit) {
 The `sort()` method sorts the elements of an array in place and returns the sorted array.
 
 ```javascript
-const fruits = ['apple', 'banana', 'cherry'];
+const fruits = ["apple", "banana", "cherry"];
 const sortedFruits = fruits.sort();
 
 console.log(sortedFruits); // ['apple', 'banana', 'cherry']
@@ -772,10 +776,10 @@ Using Promises or async/await can make the code more readable and maintainable.
 getData()
   .then(processData)
   .then(saveData)
-  .then(result => {
+  .then((result) => {
     console.log(result);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
   });
 ```
@@ -824,7 +828,6 @@ So, in summary:
 
 - Parameters (`params`) are placeholders declared in the function definition.
 - Arguments (`args`) are the actual values passed into the function when it is called.
-
 
 # JavaScript Default Parameters
 
@@ -889,10 +892,10 @@ function example(value = "Default") {
   console.log(value);
 }
 
-example();       // Output: Default
-example(null);   // Output: null
-example(0);      // Output: 0
-example("");     // Output: ""
+example(); // Output: Default
+example(null); // Output: null
+example(0); // Output: 0
+example(""); // Output: ""
 ```
 
 In the example above, `value` will only default to `"Default"` if it's not provided or explicitly set to `undefined`.
@@ -907,5 +910,5 @@ function printInfo({ name = "Anonymous", age = 0 }) {
 }
 
 printInfo({ name: "Alice", age: 30 }); // Output: Name: Alice, Age: 30
-printInfo({});                         // Output: Name: Anonymous, Age: 0
+printInfo({}); // Output: Name: Anonymous, Age: 0
 ```
