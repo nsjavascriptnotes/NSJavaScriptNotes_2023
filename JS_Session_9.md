@@ -8,7 +8,7 @@
 
 ## 4. JavaScript DOM Creating and Adding HTML elements to page.
 
-## 5. DOM Project - To-do-List Application - Refer Session:- (Sep, 30 - Oct, 01)
+## 5. DOM Project - To-do-List Application - Refer Session:- (Sep, 30 2023 - Oct, 01 2023)
 
 # JavaScript DOM Manipulation.
 
